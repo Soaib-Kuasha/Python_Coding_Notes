@@ -1,0 +1,1663 @@
+# ----------------------------if statement
+
+# age = int(input("Enter age: "))
+# if age >= 14:
+#     print("Welcome")
+
+# ----------------------------pass statement
+
+# x = 18
+# if x > 18:
+#     pass #if we do not want to write anything
+
+# ----------------------------else statement
+# age = int(input("Enter age: "))
+# if age >= 14:
+#     print("Welcome")
+# else:
+#     print("You are not welcome")
+
+# ----------------------------exercise and nasted if else
+# Number guessing game
+# make a variable, like winning_number and assign any number to it.
+# ask user to guess a number.
+# if user guessed correctly then print "YOU WIN!!!"
+# if user didn't guessed correctly then :
+#     if user guessed lower than actual number then print "too low"    
+#     if user guessed higher than actual number then print "too high"    
+
+# google "how to generate random number in python" to generate random winning number
+
+
+# import random
+# winning_number = random.randint(0,10)
+
+# guess = int(input("Enter a number between [0-10]: "))
+
+# if(guess == winning_number):
+#     print("YOU WON!!!")
+# else:
+#     if(guess < winning_number): #Nested
+#         print("Too Low")
+#     else:
+#         print("Too High")
+
+
+# ----------------------------And or Operation
+# check two conditions at the same time
+# and, or
+
+# name = "Soaib"
+# age = 24
+
+# if name=="Soaib" and age==24:
+#     print("True") #answer
+# else: 
+#     print("False")
+
+
+# if name=="Soaib" or age==23:
+#     print("True") #answer
+# else: 
+#     print("False")
+
+# ----------------------------exercise-2
+# Ask user's name and age
+# if user's name start with ('a' or 'A') and age is above 10 then
+# print 'you can watch coco movie'
+# else print 'sorry, yoou cannot watch coco'
+
+# User_name,age = input("Enter your name & age: ").split(",")
+# if(User_name[0]=='a' or User_name[0]=='A' and int(age) > 10):
+#     print("you can watch coco movie")
+# else: 
+#     print("sorry, yoou cannot watch coco")
+
+# ----------------------------if elif else statement
+# show ticket pricing
+# age 1 to 3 [free]
+# age 4 to 10 [150]
+# age 11 to 60 [250]
+# above 60 [200]
+
+# age = int(input("Enter age: "))
+
+# if 0<age<=3:
+#     print("Free")
+# elif 3<age<=10:
+#     print("150")
+# elif 10<age<=60:
+#     print("250")
+# elif 60<age:
+#     print("200")
+# else:
+#     print("Wrong input")
+
+# ----------------------------In keywords
+# name = "Soaib"
+# #in keyword
+# #if with in
+
+# if 'a' in name:
+#     print("Present")
+# else:
+#     print("Not present")
+
+# ----------------------------check empty or not
+# Name = "abc"
+
+# if Name: #true if string is not empty
+#     print("String is not empty")
+# else:
+#     print("String is empty")
+
+# -----------------------------While loop
+# loops
+# while loop, for loop
+
+# i = 1
+# while i <= 10:
+#     print(f"{i}. Hello world")
+#     i+=1
+
+# -----------------------------Sum of numbers program using while loop
+# sum : 1 to 10
+
+# n = 1
+# sum = 0
+# while n <= 10:
+#     sum = sum+n
+#     n += 1
+#     print(sum)
+
+
+# -----------------------------ex=1
+# sum of n natural numbers
+# ask a user for natural number(n)
+# print total from 1 to n
+
+# n = int(input("How many input? : "))
+# i = 1
+# sum = 0
+# while i<=n:
+#     x = int(input(f"Enter the {i}st number: "))
+#     sum = sum+x
+#     i+=1
+# print(f"Total number is : {sum}")
+
+# -----------------------------ex=2
+# ask user to input a number containing more than one digit
+# example - 1256
+# calculate 1+2+5+6
+
+
+# n = input("Enter a number containing more than one digit: ")
+# i=sum=0
+# while i < len(n):
+#     sum += int(n[i])
+#     i+=1
+# print(sum)
+
+# -----------------------------ex=3
+# ask a user for name
+# example - Soaib Ahmed
+# print count of each word
+# output : 
+
+#     S : 1
+#     o : 1
+#     a : 1
+#     i : 1
+#     b : 1
+#     A : 1
+#     h : 1
+#     m : 1
+#     e : 1
+#     d : 1
+
+# user_name = input("Enter Name: ")
+# i = 0
+# temp_var = ""
+# while i<len(user_name):
+#     if user_name[i] not in temp_var:
+#         temp_var += user_name[i]
+#         print(f"{user_name[i]}:{user_name.count(user_name[i])}")
+#     i+=1
+
+
+# -----------------------------infinite loop
+# i = 0
+# while i <= 10:
+#     print("Hello world")
+
+
+# while True:
+#     print("Hello world")
+
+
+
+# boolean --> True False
+
+# -----------------------------for loop
+# for i in range(10): # 0 to 9
+#     print("Hello world")
+
+# for i in range(1,10): # 1 to 9
+#     print("Hello world")
+
+# -----------------------------for loop example
+# sum from 1 to 10
+
+# total = 0
+# for i in range(1,11):
+#     total += i
+# print(total)
+
+# n = input("Enter number: ")
+# total = 0
+# for i in range(1,n+1):
+#     total += 1
+# print(total)
+
+# -----------------------------for loop example-02
+# ask user to input a number containing more than one digit
+# example - 1256
+# calculate 1+2+5+6
+
+# n = input("Enter number: ")
+# sum=0
+
+# for i in range(len(n)):
+#     sum += int(n[i])
+# print(sum)
+
+
+# -----------------------------ex-3
+# ask a user for name
+# example - Soaib Ahmed
+# print count of each word
+# output : 
+
+#     S : 1
+#     o : 1
+#     a : 1
+#     i : 1
+#     b : 1
+#     A : 1
+#     h : 1
+#     m : 1
+#     e : 1
+#     d : 1
+
+# name = input("Enter name: ")
+# temp_var = ""
+# for i in range(len(name)):
+#     if name[i] not in temp_var:
+#         print(f"{name[i]}:{name.count(name[i])}")
+#         temp_var += name[i]
+
+
+# -----------------------------break and continue
+# we use it in order to break Loop 
+# loop- 1 to 10 and break the loop when 5
+
+# for i in range(1,11):
+#     if i == 5:
+#         break
+#     else:
+#         print(i)
+
+
+# loop- 1 to 10 and skip 5
+
+# for i in range(1,11):
+#     if i == 5:
+#         continue
+#     else:
+#         print(i)
+
+# -----------------------------ex-06
+# Modify number guessing game
+
+# -----------------------------DRY principle
+# Do not repeat yourself
+
+# winning_number = 43
+# guess = 1
+# number = int(input("Guess a number between 1 to 100: "))
+# while True:
+#     if number == winning_number:
+#         print(f"You win, and you guessed this number in {guess} times" )
+#         break
+#     else:
+#         if number < winning_number:
+#             print("Too low")
+#         else:
+#             print("Too high")
+
+#             guess += 1
+#             number=int(input("guess again: "))
+
+# -----------------------------Step aurgument in range function
+# for i in range(1,11,2):
+#     print(i)
+
+
+# for i in range(10,0,-1):
+#     print(i)
+
+# for i in range(10,-1,-1):
+#     print(i)
+
+# for i in range(1,-11,-1):
+#     print(i)
+
+
+# -----------------------------for loop and string
+# name = "soaib"
+# for i in range(len(name)):
+#     print(i)
+
+# name1 = "ahmed"
+# for i in name1:
+#     print(i)
+
+# --------------------------------------------------------------------
+# -----------------------------functions intro
+# we can use a piece of code many times as per needed
+# name = "soaib"
+# print(len(name)) #len() is a function
+
+
+# how to define a func
+
+# def add_two(a,b):
+#     return a+b
+# print(add_two(5,4))
+
+# -----------------------------print vs return
+# def add_three(a,b,c):
+#     return a+b+c #but we use this one
+# print(add_three(1,2,3)) 
+
+# def add_three(a,b,c):
+#     print(a+b+c)
+# add_three(1,2,3)
+
+# -----------------------------function practice
+# def last_Element(x):
+#     return x[-1]
+
+# flag = input("Enter any word: ")
+# print(f"The last element is : {last_Element(flag)}")
+
+
+
+# def is_odd_even(num):
+#     if num%2==0:
+#         return "Even"
+#     else:
+#         return "Odd"
+
+# print(is_odd_even(2))
+
+
+# def is_even(num):
+#     if num%2==0:
+#         return True
+#     else:
+#         return False
+
+# print(is_even(2)) #True
+
+
+
+# def song():
+#     return "Hello world"
+# print(song())
+
+
+# -----------------------------function ex-01
+# define a function which takes two numbers as a input and return greater
+# of two numbers.
+
+# def greater(x,y):
+#     if x<y:
+#         return y
+#     elif x==y:
+#         return "equal"
+#     return x
+
+# n1 = input("Enter number 1: ")
+# n2 = input("Enter number 2: ")
+
+# print(f"{greater(int(n1),int(n2))}")
+
+
+# -----------------------------define greatest
+# def greatest(x,y,z):
+#     if x>y and x>z:
+#         return x
+#     elif y>x and y>z:
+#         return y
+#     else:
+#         return z
+
+# n1 = input("Enter number 1: ")
+# n2 = input("Enter number 2: ")
+# n3 = input("Enter number 3: ")
+
+# print(f"{greatest(int(n1),int(n2),int(n3))}")
+
+
+# -----------------------------function inside function
+# def greater(x,y):
+#     if x<y:
+#         return y
+#     elif x==y:
+#         return "equal"
+#     return x
+
+# def greatest(x,y,z):
+#     bigger = greater(x,y)
+#     return greater(bigger, z)
+
+# n1 = input("Enter number 1: ")
+# n2 = input("Enter number 2: ")
+# n3 = input("Enter number 3: ")
+
+# print(f"{greatest(int(n1),int(n2),int(n3))}")
+
+
+# kiss = keep it simple and stupid
+
+
+# -----------------------------ex
+# define is_palindrome function that take one word in string as input
+# and return true if it is palindrome else return false
+
+# def is_palindrome(flag):
+#     if flag == flag[::-1]:
+#         return True
+#     return False
+
+# print(f"{is_palindrome('madam')}")
+
+
+# -----------------------------fibonacci series
+# 0 1 1 2 3 5 8 13 21 34
+
+# def fibonacci(n):
+#     a = 0
+#     b = 1
+#     if n==1:
+#         print(a)
+#     elif n==2:
+#         print(a, b)
+#     else:
+#         print(a,b,end = " ")
+#         for i in range(n-2):
+#             c = a + b
+#             a = b
+#             b = a + b
+#             print(b, end=" ")
+
+# fibonacci(10)
+
+# -----------------------------default parameters
+# def user_info(first_name,last_name,age=23):
+#     print(f"First Name: {first_name}")
+#     print(f"Last Name: {last_name}")
+#     print(f"Age: {age}")
+
+
+# user_info("Soaib","Ahmed")
+# user_info("Soaib","Ahmed",24) #it will override 23
+
+# -----------------------------variable scope
+# global,local
+# def func():
+#     x = 7
+#     return x
+
+# def func2():
+#     print(x) #here x can not be accessed
+
+# func2()
+
+# --------------------------------------------------------------------------------
+# -----------------------------intro of lists
+# data structure
+# list --> ordered collection of Items
+# you can store anything in lists int, float, string
+
+# numbers = [1,2,3,4]
+# print(numbers) #[1, 2, 3, 4]
+# print(numbers[1])   #2
+# print(numbers[:2])  #[1, 2]
+# print(numbers[::-1])  #[4, 3, 2, 1]
+
+# words = ["w1","w2","w3"]
+# print(words)  #['w1', 'w2', 'w3']
+# words[1] = "m1"
+# print(words)  #['w1', 'm1', 'w3']
+
+
+# mixed = [1,2,3,"four","five",6.5, None]
+# print(mixed)  #[1, 2, 3, 'four', 'five', 6.5, None]
+# print(mixed[-1])  #None
+# mixed[1:] = ["x","y"]
+# print(mixed)  #[1, 'x', 'y']
+
+
+# -----------------------------add data to list
+# fruits = ["grapes","apple"]
+# fruits.append("mango")
+# print(fruits)
+
+
+# f1 = []
+# f1.append('mango')
+# f1.append('grapes')
+# print(f1)
+
+# -----------------------------More methods to add data
+# insert method
+# how to join(concatenate) two list
+# extend method
+# different between append and extend method
+
+
+# f1 = ['mango','orange'] 
+# f1.insert(1,"grapes")
+# print(f1)  # ['mango', 'grapes', 'orange']
+
+# f2 = ['grapes','apple']
+# f = f1+f2
+# print(f)  # ['mango', 'grapes', 'orange', 'grapes', 'apple']
+
+
+# f1.extend(f2)
+# print(f1)  # ['mango', 'grapes', 'orange', 'grapes', 'apple']
+# print(f2)  # ['grapes', 'apple']
+
+# #List inside list
+# f1.append(f2)
+# print(f1)  # ['mango', 'grapes', 'orange', 'grapes', 'apple', ['grapes', 'apple']] 
+# print(f2)  #['grapes', 'apple']
+
+# -----------------------------delete dada from list
+#pop method
+# f1 = ['mango','banana','apple','grapes','kiwi']
+# f1.pop() #it will delete last element by default
+# f1.pop(1) #it will delete positioned element
+# print(f1)
+
+#del method
+# f1 = ['mango','banana','apple','grapes','kiwi']
+# del f1[1]
+# print(f1)
+
+#remove method
+# f1 = ['mango','banana','apple','grapes','kiwi']
+# f1.remove('mango')
+# print(f1)
+
+# -----------------------------in keyword in list
+# f1 = ['mango','banana','apple','grapes','kiwi']
+
+# if 'apple' in f1:
+#     print("Apple is present")
+# else:
+#     print("Not present")
+
+# -----------------------------some more list method
+# count
+# sort method
+# sorted function
+# reverse
+# clear
+# copy
+
+
+# f1 = ['mango','banana','apple','grapes','kiwi']
+# print(f1.count('apple')) 
+
+# print(sorted(f1)) #print according by sort
+
+# f1.sort() #actual sort
+# print(f1)
+
+# f1.clear() #clear list
+# print(f1)
+
+# n1 = [1,2,3]
+# n2 = n1.copy() #copy the list
+# print(n2)
+
+
+# -----------------------------compare list [ is vs equal]
+# ==, is
+
+
+# f1 = ['mango','banana','apple','grapes','kiwi']
+# f2 = ['mango','apple','kiwi']
+# f3 = ['mango','apple','kiwi']
+# print(f2 == f3) #it will print true because all the elements are same
+# print(f2 is f3) #it will print false becasuse it checks weather they 
+#                 #have the same position in the memory or not
+
+
+
+# -----------------------------Join and split method
+# split method
+# convert string to list
+# user_info = 'soaib 24'.split()
+# print(user_info)
+
+# n1,n2 = 'x y'.split()
+# print(n1)
+# print(n2)
+
+
+
+# join method
+# convert list to string
+# user_info = ['soaib', '24']
+# print(','.join(user_info))
+
+# -----------------------------list vs array
+# array = can only store one data types
+# array module[has to import]
+
+# list = flexible
+
+# numpy modules -> numpy array[binds with c which speed is same but flexibility like python]
+
+
+# -----------------------------list vs string
+# string are immutable means we cannot change the string
+
+# s = "string"
+# s.title()
+# print(s) #it will print string, not String, we can store it in another variable
+
+
+
+# list are mutable
+# means we can change or modify list according to our needs
+
+
+# -----------------------------looping in list
+
+# fruits = ['mango','banana','apple','grapes','kiwi']
+
+# #for loop
+# for fruit in fruits:
+#     print(fruit)
+
+
+#while loop
+# f1 = ['mango','banana','apple','grapes','kiwi']
+
+# i = 0
+# while i < len(f1):
+#     print(f1[i])
+#     i+=1
+
+# -----------------------------list inside list
+# matrix = [[1,2,3],[4,5,6],[7,8,9]]
+# 3 items --> 3 list
+# print(matrix[1])
+# for sublist in matrix:
+#     for i in sublist:
+#         print(i)
+
+
+# matrix = [[1,2,3],[4,5,6],[7,8,9]]
+# print(matrix[0][1]) #2
+# print(type(matrix))
+
+# -----------------------------more about list
+# generate lists with range function
+# something more about pop method
+# index method
+# pass list to a function
+
+# n = list(range(1,11))
+# print(n)
+
+# n = list(range(1,11))
+# popped_iteam = n.pop()
+# print(popped_iteam)
+
+
+# n = list(range(1,11))
+# print(n.index(1)) #it will print the position
+
+# n = list(range(1,11))
+# def negative_list(l):
+#     negative = []
+#     for i in l:
+#         negative.append(-i)
+#     return negative
+
+# print(negative_list(n))
+
+# -----------------------------ex-01
+# define a function which will take list containing numbers as input and
+# return list containing square of every elements
+
+# example:
+# numbers = [1,2,3]
+# square_list(number) --> return --> [1,4,9]
+
+# def square_list(n):
+#     x = []
+#     for i in n:
+#         x.append(i*i)
+#     return x
+
+# A = [1,2,3]
+# print(square_list(A))
+
+# -----------------------------ex - 02
+# define a function which will take a list as a argument and this function
+# will return a reversed list
+
+# example:
+#     [1,2,3] --> [3,2,1]
+#     ['w1','w2'] --> ['w2','w1']
+
+
+# def reverse_list(n):
+#     x = []
+#     for i in range(len(n)):
+#         p = n.pop()
+#         x.append(p)
+#     return x
+
+# A = [1,2,3]
+# print(reverse_list(A))
+
+
+# -----------------------------ex - 03
+# define a function that take list of words as argument and return
+# list with reverse of every element in that list
+
+# example:
+#     ['abc','tuv'] --> ['cba','vut']
+
+
+# def rev(n):
+#     x = []
+#     for i in n:
+#         x.append(i[::-1])
+#     return x
+
+# A = ['abc','tuv']
+# print(rev(A))
+
+# -----------------------------ex - 04
+#filter odd oven
+#define function
+
+# list ---> [1,2,3,4,5,6,7,8]
+# output:
+#     [[1,3,5,7],[2,4,6,8]]
+
+
+# def filter_odd_even(n):
+#     x = []
+#     y = []
+#     z = []
+#     for i in n:
+#         if i%2==0:
+#             z.append(i)
+#         else:
+#             y.append(i)
+#     x.append(y)
+#     x.append(z)
+#     return x
+
+# A = [1,2,3,4,5,6,7,8]
+# print(filter_odd_even(A))
+
+# -----------------------------ex - 05
+# common elements finder function
+# define a functions which take 2 list as input and return a list
+# which contains common elements of both lists
+
+# example: 
+#     input --> [1,2,5,8],[1,2,7,6]
+#     output --> [1,2]
+
+# def finder(n1,n2):
+
+#     flag = []
+
+#     for i in n1:
+#         if i in n2:
+#             flag.append(i)
+    
+#     return flag
+
+# def alternative_finder(n1,n2):
+
+#     flag = []
+
+#     for i in n1:
+#         for j in n2:
+#             if i == j:
+#                 flag.append(i)
+    
+#     return flag
+
+# A = []
+# B = []
+
+# x1 = int(input("How many elements you want to add for the 1st list?: "))
+# x2 = int(input("How many elements you want to add for the 2nd list?: "))
+
+# print("Enter the elements for the first list: ")
+# for i in range(x1):
+#     z = int(input(f"{i}. Element --> "))
+#     A.append(z)
+# print("Enter the elements for the second list: ")
+# for i in range(x2):
+#     z = int(input(f"{i}. Element --> "))
+#     B.append(z)
+
+# print(A)
+# print(B)
+
+# print(finder(A,B))
+# print(alternative_finder(A,B))
+
+
+# -----------------------------min and max function
+
+# numbers = [1,2,3]
+# print(min(numbers))
+# print(max(numbers))
+
+# -----------------------------ex - 06
+# define a function which will tell if the list has another list
+# inside of it. 
+
+# input: [1,2,3,[1,2,3]]
+# output: 1
+
+# def list_no(n):
+#     flag = 0
+#     for i in n:
+#         if type(i) == list:
+#             flag+=1
+#     return flag
+
+
+# A = [1,2,3,[1,2,3]]
+# print(list_no(A))
+
+# -----------------------------------------------------------------------------------------------------
+# -----------------------------tuples intro
+# tuple data structure
+# tuple can store any data type
+# most important tuples are immutable,once tuple is created
+# you cannot update
+# data inside tuple
+
+# example = ('one','two','three')
+# no append, no insert, no pop, no remove
+
+
+
+# example = ('one','two','three')
+# days = ('mon','tues')
+
+# tuples are faster than list
+
+# methods
+# count, index
+# len function
+# slicing
+
+
+# -----------------------------More about tuples
+# looping in tuples
+# tuple with one element
+# tuple without parenthesis
+# tuple unpacking
+# list inside tuple
+# some functions that you can use with tuples
+
+
+
+
+# mixed = (1,2,3,4.0)
+
+#for loop and tuple
+# for i in mixed:
+#     print(i)
+    #NOTE - you can use while loop too
+
+
+
+
+#tuple with one element
+# nums = (1)
+# words = ('w1')
+#print(type(nums))
+#print(type(words))
+#in order to be a tuble -->
+# nums = (1,)
+# words = ('w1',)
+
+
+#tuple without parenthesis
+# guitars = 'yamaha','baton rouge','taylor'
+# print(type(guitars))
+
+
+#tuple unpacking
+# g = ('yamaha','baton rouge','taylor')
+# g1,g2,g3 = g
+
+
+# list inside tuple
+# fav = ('x','y',['A','B','C'])
+
+
+# some functions that you can use with tuples
+# min(),max(),sum()
+# print(sum(mixed))
+
+
+# -----------------------------function returning two values
+# def func(int1, int2):
+#     add = int1+int2
+#     multiply = int1*int2
+#     return add, multiply
+
+# print(func(2,3))
+
+# add, multiply = func(2,3)
+# print(add)
+# print(multiply)
+
+
+# -----------------------------something more about tuples, list, str
+# nums = tuple(range(1,11))
+# print(nums)
+
+# nums = list((1,2,3,4,5,6,7,8))
+# print(nums) #The tuple will converted to list
+
+
+# nums = str((1,2,3,4,5,6,7,8))
+# print(type(nums)) # "(1,2,3,4,5,6,7,8)"
+
+# ------------------------------------------------------------------------------------------
+# -----------------------------intro to dictionaries
+# dictionaries intro
+# Q - why we use dictionaries?
+# A - Because of limitations of lists, lists are not enough to represent
+# real data.
+
+#example
+# user = ["Soaib",24,['coco','naruto'],['awakening','fairy tale']]
+# This list contains user name, age, fav movies, fav anime
+# you can do this but this is not a good way to do this.
+
+
+
+# Q - what are dictionaries
+# A - unorderd collections of data in key : value pair.
+
+
+
+# how to create dictionaries
+# user = {'name' : "Soaib", 'age' : 24}
+# print(user)
+# print(type(user))
+
+
+
+#second method to create dictionaries
+# user1 = dict(name = 'Soaib', age = 24)
+# print(user1)
+
+
+#how to access data from dictionary
+# NOTE - There is no indexing because of unordered collections of data.
+# user1 = dict(name = 'Soaib', age = 24)
+# print(user1['name'])
+
+
+# which type of data a dictionary can store?
+# anything
+# numbers,string,list,dictionary,tuple
+
+# user_info = {
+#     'name' : 'Soaib',
+#     'age'  : 24,
+#     'fav_movies' : ['coco','naruto'],
+#     'fav_tunes'  : ['fairy tale'],
+
+#     'address' : {
+#         'House No' : 111/2,
+#         'District' : 'Dhaka'
+#     }
+# }
+
+# print(user_info['address'])
+
+
+
+#how to add data to empty dictionary
+# user_info = {}
+# user_info['name'] = 'soaib'
+# print(user_info)
+
+
+# -----------------------------Looping and in keyword
+# in keyword and iterations in dictionary
+
+
+# user_info = {
+#     'name' : 'Soaib',
+#     'age'  : 24,
+#     'fav_movies' : ['coco','naruto'],
+#     'fav_tunes'  : ['fairy tale'],
+# }
+
+
+#check if key exist in dictionary
+# if 'name' in user_info:
+#     print("Present")
+# else:
+#     print("Not Present")
+
+
+#check if value exist in dictionary   ----> values() method
+# if 'Soaib' in user_info.values():
+#     print("Present")
+# else:
+#     print("Not Present")
+
+
+#loops in dictionary
+# for i in user_info:
+#     print(i)
+
+# for i in user_info.values():
+#     print(i)
+
+
+#values() method
+# user_info_values = user_info.values()
+# print(user_info_values)
+# print(type(user_info_values))
+
+# user_info_keys = user_info.keys()
+# print(user_info_keys)
+# print(type(user_info_keys))
+
+
+# items method
+# user_items = user_info.items()
+# print(user_items)
+# print(type(user_items))
+# [('',''),(),()]
+
+
+# for key, value in user_info.items():
+#     print(f"key is {key} and value is {value}")
+
+
+
+# -----------------------------add and delete data from dictionaries
+# user_info = {
+#     'name' : 'Soaib',
+#     'age'  : 24,
+#     'fav_movies' : ['coco','naruto'],
+#     'fav_tunes'  : ['fairy tale'],
+# }
+
+
+#how to add data
+# user_info['fav_song'] = ['s1','s2']
+# print(user_info)
+
+#pop method
+# popped_item = user_info.pop('fav_tunes')
+# print(popped_item)
+# print(user_info)
+
+
+#popitem method
+# popped_item = user_info.popitem()
+# print(popped_item)
+# print(user_info)
+
+
+# -----------------------------update() method
+# user_info = {
+#     'name' : 'Soaib',
+#     'age'  : 24,
+#     'fav_movies' : ['coco','naruto'],
+#     'fav_tunes'  : ['fairy tale'],
+# }
+
+# more_info = {
+#     'District' : 'Dhaka',
+#     'Hobbies'  : ['coding','watching anime']
+# }
+
+# user_info.update(more_info)
+
+# print(user_info)
+
+# -----------------------------fromkeys,get,copy,clear method
+#fromkeys --> use to give same value to every key
+# d = {
+#     'name' : 'unknown', 'age' : 'unknown'
+# }
+
+# d = dict.fromkeys(['name','age','height'],'unknown')
+# print(d)
+
+# d = dict.fromkeys(('name','age','height'),'unknown')
+# print(d)
+
+# d = dict.fromkeys('abc','unknown')
+# print(d)
+
+# d = dict.fromkeys(range(1,11),'unknown')
+# print(d)
+
+
+
+
+#get method (usefull)
+
+# d = {
+#     'name' : 'unknown', 'age' : 'unknown'
+# }
+# print(d.get('name'))
+
+
+# if 'name' in d:
+#     print("Present")
+# else:
+#     print("Not present")
+
+
+# if d.get('name'):
+#     print("Present")
+# else:
+#     print("Not Present")
+
+
+
+
+#clear method
+# d.clear()
+# print(d)
+
+
+#copy method
+# d1 = d.copy()
+# print(d1)
+
+
+
+# -----------------------------More about get() method
+#two same keys in dictionaries
+# user = {
+#     'name' : 'Soaib',
+#     'age'  : 24,
+#     'age'  : 24,
+#  }
+# print(user.get('name', 'Not Found'))
+
+
+
+# -----------------------------ex-01
+# define a function that takes a number(n)
+# return a dictionary containing cube of numbers from 1 to n
+
+# example:
+#     cube_finder(3)
+#     {1:1, 2:8, 3:27}
+
+
+# def cube_finder(n):
+#     x = {}
+#     for i in range(1,n+1):
+#         x[i] = i**3
+#     return x
+
+# print(cube_finder(3))
+
+# ---------------------------------------------------------------------
+# -----------------------------intro to sets
+# set data type
+# unordered collection of unique Items
+
+# s = {1,2,3}
+# print(s) #{1, 2, 3}
+# print(type(s)) 
+
+
+# s1 = {1,2,3,2}
+# print(s1) ##{1, 2, 3}
+# print(type(s1)) 
+
+# #cannot do indexing
+# s2 = {1,2,3} 
+# print(s2[0]) #Error
+
+
+#why we use sets
+#remove duplicate
+# l = [1,1,1,2,3,4,5]
+# s2 = list(set(l))
+# print(s2)
+
+
+#add item
+# s = {1,2,3,4}
+# s.add(5)
+# print(s)
+
+
+#remove item
+# s = {1,2,3}
+# s.remove(3)
+# print(s)
+
+
+#discard method
+# s = {1,2,4}
+# s.discard(5)
+# print(s)
+
+
+#clear method
+# s = {1,2,3}
+# s.clear()
+# print(s)
+
+
+#copy method
+# s = {12,2,4}
+# s1 = s.copy()
+# print(s1)
+
+
+#we can only store numbers and string in sets
+
+# -----------------------------More about sets
+# in keywords in sets and for loop
+
+# s = {'a','b','c'}
+
+#in keyword to check if item is present or not in set
+# if 'a' in s:
+#     print("Present")
+# else:
+#     print("Not Present")
+
+
+# For loop
+# for item in s:
+#     print(item)
+
+
+#set math
+
+# s1 = {1,2,3,4}
+# s2 = {3,2,4,6}
+
+# Union
+# intersection
+
+# union_Set = s1 | s2 #union
+# print(union_Set)
+
+# intersection_Set = s1 & s2 #intersection
+# print(intersection_Set)
+
+# -------------------------------------------------------------------
+
+# -----------------------------list comprehension
+# with the help of list comprehension we can create of list in one line
+
+# create a list of squares from 1 to 10
+# squares = []
+# for i in range(1,11):
+#     squares.append(i**2)
+# print(squares)
+
+
+# squares = [i**2 for i in range(1,11)]
+# print(squares)
+
+
+
+
+# negative = []
+# for i in range(1,11):
+#     negative.append(-i)
+# print(negative)
+
+# negative = [-i for i in range(1,11)]
+# print(negative)
+
+
+
+
+# names = ['Soaib','Ahmed']
+# flag = []
+# for i in names:
+#     flag.append(i[0])
+# print(flag)
+
+# names = ['Soaib','Ahmed']
+# flag = [i[0] for i in names]
+# print(flag)
+
+
+#  -----------------------------ex-1
+# define a function that take list of strings
+# list containing reverse of every string
+
+# NOTE : Use list comprehension
+
+# Example: 
+#     l = ['abc','tuv','zyx']
+#     reverse_String(l) ----> ['bac','vut','xyz']
+
+
+# def reverse_string(l):
+#     return [i[::-1] for i in l]
+
+# l = ['abc','tuv','zyx']
+# print(reverse_string(l))
+
+
+#  -----------------------------List comprehension with if statement
+# numbers = list(range(1,11))
+# even_numbers = [i for i in numbers if i%2==0]
+# print(even_numbers)
+
+
+#  -----------------------------ex-2
+# num to string
+# define a function
+
+# example:
+#     input ---> [True,False,[1,2,3],1,1.0,3]
+#     output ---> ['1','1.0','3']
+
+# l = [True,False,[1,2,3],1,1.0,3]
+
+# flag = []
+# for i in l:
+#     if (type(i) == int) or (type(i) == float):
+#         flag.append(str(i))
+
+# print(flag)
+
+
+
+
+# def test(l):
+#     return [str(i) for i in l if (type(i) == int) or (type(i) == float)]
+# print(test([True,False,[1,2,3],1,1.0,3]))
+
+
+#  -----------------------------list comprehension with if else
+# nums = [1,2,3,4,5,6,7,8]
+
+# flag = [-i if (i%2!=0) else i*i for i in nums]
+# print(flag)
+
+
+#  -----------------------------list comprehension in nested list
+# example = [[1,2,3],[1,2,3],[1,2,3]]
+
+# flag = [[i for i in range(1,4)] for j in range(1,4)]
+# print(flag)
+
+
+# --------------------------------------------------------------------
+#  -----------------------------Dictionary comprehension
+# square_ex = {1:1, 2:4, 3:9}
+
+# square = {num:num**2 for num in range(1,11)}
+# print(square)
+
+# square = {f"Square of {num} is:{num**2}" for num in range(1,11)}
+# print(square)
+
+
+#  -----------------------------Dictionary comprehension with if else
+# d = {1:'odd', 2:'even'}
+
+# flag = {key:('even' if key%2==0 else 'odd') for key in range(1,11)}
+# print(flag)
+
+# -------------------------------------------------------------------
+#  -----------------------------sets comprehension
+# s = {k**2 for k in range(1,11)}
+# print(s)
+
+# names = ['soaib','ahmed']
+# first = {i[0] for i in names}
+
+# print(first)
+
+#-----------------------------------------------------------------
+#  ----------------------------- intro to args
+# make flexible functions
+# *operator
+# *args
+
+# def total(a,b):
+#     return a+b
+# print(total(3,4))
+
+# if we want to pass more than 2 parameters, it will show error
+# Now lets see
+
+# def total(a,b):
+#     return a+b
+
+# def all_total(*args):
+#     print(args)
+#     print(type(args)) #tuple
+# t = all_total(1,2,3,4,5,6)
+
+
+
+
+# def all_total(*args):
+#     total = 0
+#     for num in args:
+#         total += num
+#     return total
+# print(all_total(1,2,3,4,5,6))
+
+#  -----------------------------args with normal parameters
+# def nultiply_nums(*args):
+#     multiply = 1
+#     for i in args:
+#         multiply *= i
+#     return multiply
+# print(nultiply_nums(1,2,3)) #6
+
+
+# def nultiply_nums(num, *args):
+#     multiply = 1
+#     for i in args:
+#         multiply *= i
+#     return multiply
+# print(nultiply_nums(1,2,3)) #Here num will be one, and output is = 3*2 = 6
+
+
+# def nultiply_nums(*args, num): # always write the *args at the end.
+
+#  -----------------------------args as argument
+
+# def nultiply_nums(*args):
+#     multiply = 1
+#     for i in args:
+#         multiply *= i
+#     return multiply
+
+# nums = [2,3,4]
+# print(nultiply_nums(*nums)) #here the list nums will be unpack, same goes for
+                            # the tuple if there ant.
+
+
+#  -----------------------------ex-01
+# define function
+# input 
+
+# num, iterable(tuple, list)containing numbers as args
+
+# example:
+#     nums = [1,2,3]
+#     to_power(3,*nums)
+
+# output:
+#     list ---> [1**3, 8, 27]
+
+
+# if user didn't pass any args then give a user a messege 'hey you didn't pass args
+
+# else
+# return list
+
+# NOTE : use list comprehension
+
+
+
+# def to_power(num,*args):
+#     flag = []
+#     for i in args:
+#         flag.append(i**num)
+#     return flag
+
+# l = [1,2,3]
+# print(to_power(3,*l))
+
+
+
+# or
+
+
+# def to_power(num,*args):
+#     if args:
+#         return [i**num for i in args]
+#     else:
+#         return "You did not pass any args"
+# l = [1,2,3]
+# print(to_power(3,*l))
+
+#  -----------------------------kwargs
+# kwargs (keyword argument), used for dictionary
+# **kwargs (double star operator)
+
+# kwargs as a parameter
+# def func(**kwargs):
+#     print(kwargs)
+#     print(type(kwargs))
+
+# func(name='Soaib',age=23) #{'name': 'Soaib', 'age': 23}
+
+
+# def func(**kwargs):
+#     for k,v in kwargs.items():
+#         print(f"{k}:{v}")
+
+# func(name='Soaib',age=23)
+
+
+
+# def func(**kwargs):
+#     for k,v in kwargs.items():
+#         print(f"{k}:{v}")
+
+# #dictionary unpacking
+# d = {
+#     'name' : 'Soaib',
+#     'age'  : 24,
+# }
+
+# func(**d)
+
+
+
+#  -----------------------------function with all types of parameter
+# PADK
+# p = parameter
+# A = *args
+# D = default parameter
+# K = **kwargs
+
+# if we want to use all of this, we have to follow this sequence
+# def func(name,*args,last_name='unknown',**kwargs):
+#     print(name)
+#     print(args)
+#     print(last_name)
+#     print(kwargs)
+
+# func('soaib',1,2,3,a = 1, b =2)
+
+# ----------------------------------------------------------
+#  -----------------------------lambda expression
+# lambda expression (anonymous function)
+
+#normal function
+# def add(a,b):
+#     return a+b
+
+#lambda function
+# add1 = lambda a,b : a+b
+# print(add1(2,3))
+
+# basically we do not assign lambda in a variable.
+# we use it in built in function like -> map,reduce,filter
+
+
+# multiply = lambda a,b : a*b
+# print(multiply(2,3))
+# print(multiply) #<function <lambda> at 0x00000288AD14E1F0>
+
+
+#  -----------------------------lambda expression practice
+# def is_even(a):
+#     if a%2==0:
+#         return True
+#     return False
+
+# print(is_even(5))
+
+
+# isEven1 = lambda a : a%2 == 0
+# print(isEven1(2))
+
+
+# last_char = lambda s : s[-1]
+# print(last_char("Soaib"))
+
+
+
+# lambda with if, else
+# def func(s):
+#     if len(s) > 5:
+#         return True
+#     return False
+
+
+
+# func1 = lambda s : True if len(s) > 5 else False
+# print(func1("soaib"))
+
+# ----------------------------------------------------------
+#  -----------------------------Enumerate Function
+# we use enumerate function with for loop to track position of our 
+# item in iterable
+
+
+# How we can do this without enumerate function
+# names = ['abc','avdsf','sdsgvsg']
+# # 0 -- 'abc'
+# # 1 -- 'avdsf'
+# pos = 0
+# for name in names:
+#     print(f"{pos} ---> {name}")
+
+
+# with enumerate function
+# names = ['abc','avdsf','sdsgvsg']
+
+# for pos, name in enumerate(names):
+#     print(f"{pos} ---> {name}")
+
+
+
+
+
+# define a function that take two arguments
+# l. list containing string
+# 2. string that you want to find in your list
+
+# and this function will return the index of string in your list and
+# if string is not present then return -1
+
+
+#  -----------------------------
